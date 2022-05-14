@@ -1,0 +1,85 @@
+.button {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $common-color;
+  background-color: $basic-color;
+  text-decoration: none;
+  border: 2px solid transparent;
+
+  &:hover {
+    background-color: rgba(94, 170, 47, 1);
+  }
+
+  &:active {
+    background-color: rgba(94, 170, 47, 1);
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:focus {
+    outline: 2px solid $basic-font-color;
+  }
+}
+
+.button--primary {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 8px 20px;
+}
+
+.button--secondary {
+  font-size: 16px;
+  line-height: 16px;
+  color: $basic-font-color-three;
+  background-color: transparent;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+  }
+
+  &:focus {
+    outline: 2px solid $basic-font-color;
+  }
+}
+
+.button--third {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 8px 20px;
+}
+
+.button--accent-color {
+  color: rgba(68, 68, 68, 1);
+  background-color: $accent-color;
+
+  &:hover {
+    background-color: $accent-color-modified;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:focus {
+    border: 2px solid transparent;
+    outline: 2px solid $basic-font-color;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .button--primary {
+    padding: 14px 20px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .button--secondary {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

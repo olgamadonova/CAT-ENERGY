@@ -1,0 +1,97 @@
+.promo-action {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-content: center;
+  background-image: url("../img/decorative-images/mobile/promo-image.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-color: $basic-color;
+  height: 290px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/decorative-images/mobile/promo-image@2x.jpg");
+  }
+}
+
+.promo-action::before {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 82px;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  background: url("../../img/decorative-images/mobile/gift-icon.svg") no-repeat 50% 50%;
+}
+
+.promo-action__description {
+  grid-column: 1/1;
+  grid-row: 1/1;
+  margin-top: 100%;
+  align-self: center;
+  z-index: 1;
+  font-size: 16px;
+  line-height: 20px;
+  color: $common-color;
+  text-align: center;
+}
+
+@media all and (min-width: $middle-size) {
+  .promo-action {
+    grid-template-columns: 1fr 291px;
+    background-image: url("../img/decorative-images/tablet/promo-image-tablet.jpg");
+    height: 200px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/decorative-images/tablet/promo-image-tablet@2x.jpg");
+    }
+  }
+
+  .promo-action::before {
+    top: 0;
+    bottom: 0;
+    left: -480px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .promo-action__description {
+    grid-column: 2/3;
+    margin: 0;
+    grid-row: 1/1;
+    align-self: center;
+    text-align: start;
+  }
+}
+
+@media all and (min-width: $large-size) {
+  .promo-action {
+    grid-template-columns: auto;
+    background-image: url("../img/decorative-images/desktop/promo-image-desktop.jpg");
+    background-repeat: no-repeat;
+    height: 289px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/decorative-images/desktop/promo-image-desktop@2x.jpg");
+    }
+  }
+
+  .promo-action::before {
+    top: -100px;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    background: url("../../img/decorative-images/mobile/gift-icon.svg") no-repeat 50% 50%;
+  }
+
+  .promo-action__description {
+    margin-top: 90%;
+    text-align: center;
+  }
+}

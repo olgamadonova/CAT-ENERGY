@@ -1,0 +1,111 @@
+@media all and (max-width: $mobile-only) {
+  .main-navigation {
+    position: relative;
+  }
+
+  .main-navigation--nojs .main-navigation__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease-in-out;
+  }
+
+  .main-navigation__toggle {
+    display: none;
+    position: absolute;
+    min-height: 23px;
+    width: 30px;
+    top: -49px;
+    right: 2px;
+    border: none;
+    border-bottom: 1.5px solid $basic-font-color-three;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+    &:focus {
+      outline: 2px solid  $basic-font-color;
+      outline-offset: 7px;
+    }
+  }
+
+  .main-navigation__toggle::before {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background-color: $basic-font-color-three;
+    content: "";
+    transition: 0.3s ease-in-out;
+  }
+
+  .main-navigation__toggle::after {
+    position: absolute;
+    bottom: 17px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background-color: $basic-font-color-three;
+    content: "";
+    transition: 0.3s ease-in-out;
+  }
+
+  .main-navigation--closed .main-navigation__toggle {
+    display: block;
+  }
+
+  .main-navigation--closed .main-navigation__list {
+    display: none;
+  }
+
+  .main-navigation--opened .main-navigation__list {
+    position: absolute;
+    top: -2px;
+    left: -20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    background-color: $common-color;
+    z-index: 3;
+    opacity: 1;
+  }
+
+  .main-navigation--opened .main-navigation__toggle {
+    display: block;
+    min-height: 46px;
+    width: 30px;
+    top: -61px;
+    border-color: transparent;
+
+    &:focus {
+      outline-offset: 1px;
+    }
+  }
+
+  .main-navigation--opened .main-navigation__toggle::before {
+    visibility: visible;
+    transform: rotate(45deg);
+    top: 23px;
+  }
+
+  .main-navigation--opened .main-navigation__toggle::after {
+    visibility: visible;
+    transform: rotate(-45deg);
+    top: 22.5px;
+  }
+
+  .main-navigation--nojs .main-navigation__toggle {
+    display: none;
+  }
+}
+
+@media all and (min-width: $middle-size) {
+  .main-navigation__toggle {
+    display: none;
+  }
+}

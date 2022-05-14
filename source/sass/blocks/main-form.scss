@@ -1,0 +1,57 @@
+.main-form {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+}
+
+.main-form__title {
+  margin-top: 0;
+  margin-bottom: 33px;
+}
+
+.main-form__description {
+  margin-top: 0;
+  margin-bottom: 9px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.main-form__container {
+  padding: 23px 20px 25px 20px;
+}
+
+@media all and (min-width: $middle-size) {
+  .main-form__container {
+    padding: 0 70px;
+  }
+
+  .main-form__title {
+    margin-top: 18px;
+    margin-bottom: 54px;
+  }
+
+  .main-form__description {
+    max-width: 500px;
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media all and (min-width: $large-size) {
+  .main-form {
+    padding-top: 0;
+  }
+
+  .main-form__container {
+    padding: 0 110px;
+  }
+
+  .main-form__title {
+    margin-top: 55px;
+    margin-bottom: 52px;
+  }
+
+  .main-form__description {
+    margin-bottom: -5px;
+  }
+}

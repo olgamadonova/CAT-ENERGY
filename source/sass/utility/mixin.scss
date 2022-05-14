@@ -1,0 +1,29 @@
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flex($flex-direction, $align-items, $justify-content, $flex-wrap) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-wrap: $flex-wrap;
+}
+
+@mixin inline-grid($size-one, $size-two, $column-gap, $align-items) {
+  display: inline-grid;
+  grid-template-columns: $size-one $size-two;
+  column-gap: $column-gap;
+  align-items: $align-items;
+}
+
+@mixin dark-focus {
+  outline: 2px solid $basic-font-color;
+}

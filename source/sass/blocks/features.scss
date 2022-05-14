@@ -1,0 +1,101 @@
+.features__title {
+  @include reset();
+
+  margin-bottom: 40px;
+}
+
+.features__list {
+  @include reset-list;
+}
+
+.features__list-item {
+  @include inline-grid(min-content, auto, 20px, center);
+  margin-bottom: 20px;
+}
+
+.features__list-item::before {
+  display: inline-block;
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-color: $basic-color;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.features__list-item--first::before {
+  background-image: url("../img/decorative-images/mobile/features-list-item-first.svg");
+}
+
+.features__list-item--second::before {
+  background-image: url("../img/decorative-images/mobile/features-list-item-second.svg");
+}
+
+.features__list-item--third::before {
+  background-image: url("../img/decorative-images/mobile/features-list-item-third.svg");
+}
+
+.features__list-item--fourth::before {
+  background-image: url("../img/decorative-images/mobile/features-list-item-fourth.svg");
+}
+
+.features__list-item--summary {
+  margin-bottom: 0;
+}
+
+@media all and (min-width: $middle-size) {
+  .features__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    column-gap: 130px;
+    row-gap: 90px;
+    counter-reset: list-counter;
+  }
+
+  .features__title {
+    margin-bottom: 72px;
+  }
+
+  .features__list-item {
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: auto;
+    grid-template-rows: min-content auto;
+    align-content: start;
+    min-height: 230px;
+    row-gap: 30px;
+    margin-bottom: 0;
+    counter-increment: list-counter;
+  }
+
+  .features__list-item::before {
+    width: 80px;
+    height: 80px;
+  }
+
+  .features__list-item::after {
+    position: absolute;
+    content: counter(list-counter);
+    top: -40px;
+    right: 20px;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 280px;
+    line-height: 280px;
+    color: $accent-color;
+    z-index: -1;
+  }
+}
+
+@media all and (min-width: $large-size) {
+  .features__title {
+    margin-bottom: 22px;
+  }
+
+  .features__list {
+    column-gap: 73px;
+    row-gap: 0;
+    padding: 47px 0 26px 0;
+  }
+}

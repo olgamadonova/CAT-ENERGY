@@ -1,0 +1,38 @@
+.section-title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+.section-title--accent {
+  font-size: 36px;
+  line-height: 40px;
+  color: $common-color;
+}
+
+.section-title--basic {
+  line-height: 40px;
+  color: $basic-font-color-three;
+}
+
+.section-title--small {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+@media all  and (min-width: 768px) {
+  .section-title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .section-title--accent {
+    color: $basic-font-color-three;
+  }
+
+  .section-title--small {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}

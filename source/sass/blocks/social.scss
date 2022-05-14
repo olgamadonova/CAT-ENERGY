@@ -1,0 +1,54 @@
+.social {
+  @include reset-list();
+}
+
+.social__item {
+  width: 34px;
+  height: 28px;
+  margin-right: 20px;
+}
+
+.social__item:last-child {
+  margin-right: 0;
+}
+
+.social__link {
+  display: inline-block;
+  width: 100%;
+}
+
+.social__icon {
+  display: inline-block;
+  width: 100%;
+  fill: rgba(102, 102, 102, 1);
+  border: 2px solid transparent;
+}
+
+.social__link:hover .social__icon {
+  fill: $basic-color;
+}
+
+.social__link:active .social__icon {
+  fill: rgba(104, 183, 56, 0.6);
+}
+
+.social__link:focus .social__icon {
+  @include dark-focus();
+}
+
+.social__link:focus {
+  outline: none;
+}
+
+.social__icon-telegram {
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+@media all and (min-width: $middle-size) {
+  .social__icon {
+    width: 34px;
+    height: 26px;
+  }
+}

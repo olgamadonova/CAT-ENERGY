@@ -1,0 +1,41 @@
+.main-index__promo,
+.main-index__service {
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+
+.main-index__service {
+  margin-bottom: 18px;
+}
+
+.main-index__features {
+  margin-bottom: 50px;
+}
+
+.main-index__promo {
+  position: relative;
+}
+
+@media all and (min-width: $middle-size) {
+  .main-index__features {
+    margin-bottom: 55px;
+  }
+
+  .main-index__promo {
+    margin-bottom: -45px;
+  }
+}
+
+@media all and (min-width: $large-size) {
+  .main-index__promo {
+    margin-bottom: 135px;
+  }
+
+  .main-index__service {
+    margin-bottom: 90px;
+  }
+
+  .main-index__features {
+    margin-bottom: 10px;
+  }
+}

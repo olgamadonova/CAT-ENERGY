@@ -1,0 +1,40 @@
+.main-catalog__title {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 41px;
+  text-align: left;
+}
+
+.main-catalog__title::after {
+  position: absolute;
+  bottom: -100%;
+  right: 0;
+  left: -30px;
+  content: "";
+  height: 1px;
+  width: calc(100vw + 30px);
+  background-color: rgba(230, 230, 230, 1);
+}
+
+@media all and (min-width: $middle-size) {
+  .main-catalog__title {
+    margin-top: 15px;
+    margin-bottom: 78px;
+    text-align: left;
+  }
+
+  .main-catalog__title::after {
+    display: none;
+  }
+}
+
+@media all and (min-width: $large-size) {
+  .main-catalog {
+    padding-top: 0;
+  }
+
+  .main-catalog__title {
+    margin-top: 55px;
+    margin-bottom: 92px;
+  }
+}
